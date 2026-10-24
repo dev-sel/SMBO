@@ -1,0 +1,182 @@
+/* Orange means "this needs you" and nothing else, so buttons are slate.
+ * A colour never carries meaning alone, every state has a word too. */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Raleway:wght@500;600&display=swap");
+
+:root {
+  --brand-orange: #f48502;
+  --slate: #4a5464;
+
+  --canvas: #262626;
+  --surface: #383838;
+  --raised: #414141;
+  --border: #4f4f4f;
+  --text: #f4f4f3;
+  --muted: #9aa1ac;
+
+  /* the brand red is #c0392b, lightened to pass 3:1 on the dark canvas */
+  --urgent: #d0432f;
+  --attention: #f2c94c;
+  --resolved: #3e7d5a;
+
+  --font-head: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Raleway", "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", "SF Mono", Menlo, Consolas, monospace;
+
+  --gap: 16px;
+  --radius: 6px;
+
+  /* one knob for the whole UI, every size below is px. 1.5 suits a 14 inch laptop,
+   * lower it on a big monitor */
+  zoom: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+h1 { font-size: 26px; }
+h2 { font-size: 19px; }
+h3 { font-size: 16px; }
+
+.num,
+.mono {
+  font-variant-numeric: tabular-nums;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: normal;
+  font-size: 13px;
+}
+
+a {
+  color: var(--text);
+  text-decoration-color: var(--muted);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-color: var(--brand-orange);
+}
+
+button {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--slate);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  padding: 9px 14px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #576375;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.quiet {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+button.quiet:hover:not(:disabled),
+button.quiet[aria-pressed="true"] {
+  background: var(--raised);
+  color: var(--text);
+}
+
+button.quiet[aria-pressed="true"] {
+  border-color: var(--slate);
+}
+
+button.small {
+  padding: 4px 9px;
+  font-size: 12px;
+}
+
+input,
+select {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text);
+  background: var(--canvas);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 9px 11px;
+  width: 100%;
+}
+
+input[type="date"] {
+  color-scheme: dark;
+}
+
+input:focus,
+select:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--brand-orange);
+  outline-offset: 2px;
+}
+
+/* a level class sets --level, and chips, dots, the legend and the bar read it */
+.urgent { --level: var(--urgent); }
+.info { --level: var(--attention); }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 10px 3px 8px;
+  border-radius: 999px;
+  background: var(--canvas);
+  border: 1px solid var(--level, var(--border));
+  white-space: nowrap;
+}
+
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex: none;
+  background: var(--level, var(--muted));
+}

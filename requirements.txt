@@ -1,0 +1,8 @@
+# the pipeline: spans, trees in reach, surface model spot checks
+numpy==2.5.2
+pyproj==3.7.2
+tifffile==2026.9.9
+imagecodecs==2026.8.16   # tifffile needs it for the LZW tiles, without it they look corrupt
+
+# tests
+pytest==9.1.1

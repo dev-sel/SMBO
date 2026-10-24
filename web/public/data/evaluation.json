@@ -1,0 +1,240 @@
+{
+ "scenarios": [
+  {
+   "id": "walkthrough",
+   "name": "A spruce lies on LINE_026 span 3 and tripped the line, and a cracked joint is heating up on LINE_036 span 14.",
+   "committed": {
+    "faults": 2,
+    "found": 2,
+    "firstWave": 1,
+    "wrong": 0,
+    "minutes": 111.0371409032825,
+    "line024": "live 25 min",
+    "flights": 7,
+    "retasks": 0,
+    "stranded": 0
+   },
+   "replan": {
+    "faults": 2,
+    "found": 2,
+    "firstWave": 2,
+    "wrong": 0,
+    "minutes": 14.565457874513974,
+    "line024": "live 25 min",
+    "flights": 5,
+    "retasks": 8,
+    "stranded": 0
+   }
+  },
+  {
+   "id": "r02",
+   "name": "The caller was right: a spruce leans on LINE_026 span 3. The line stayed live.",
+   "committed": {
+    "faults": 1,
+    "found": 1,
+    "firstWave": 1,
+    "wrong": 0,
+    "minutes": 6.701617586180362,
+    "line024": "off",
+    "flights": 2,
+    "retasks": 0,
+    "stranded": 0
+   },
+   "replan": {
+    "faults": 1,
+    "found": 1,
+    "firstWave": 1,
+    "wrong": 0,
+    "minutes": 6.701617586180362,
+    "line024": "off",
+    "flights": 2,
+    "retasks": 1,
+    "stranded": 0
+   }
+  },
+  {
+   "id": "r03",
+   "name": "The line switched off as a precaution really has a tree on it, on span 45.",
+   "committed": {
+    "faults": 1,
+    "found": 1,
+    "firstWave": 1,
+    "wrong": 0,
+    "minutes": 18.335634178717157,
+    "line024": "off",
+    "flights": 2,
+    "retasks": 0,
+    "stranded": 0
+   },
+   "replan": {
+    "faults": 1,
+    "found": 1,
+    "firstWave": 1,
+    "wrong": 0,
+    "minutes": 18.335634178717157,
+    "line024": "off",
+    "flights": 2,
+    "retasks": 1,
+    "stranded": 0
+   }
+  },
+  {
+   "id": "r04",
+   "name": "The flash was a damaged wire on LINE_037 span 13. The site's log shows no generator test.",
+   "committed": {
+    "faults": 1,
+    "found": 1,
+    "firstWave": 1,
+    "wrong": 0,
+    "minutes": 11.537294813782438,
+    "line024": "off",
+    "flights": 3,
+    "retasks": 0,
+    "stranded": 0
+   },
+   "replan": {
+    "faults": 1,
+    "found": 1,
+    "firstWave": 1,
+    "wrong": 0,
+    "minutes": 9.533047737265349,
+    "line024": "off",
+    "flights": 2,
+    "retasks": 2,
+    "stranded": 0
+   }
+  },
+  {
+   "id": "r05",
+   "name": "A cracked joint is heating up on LINE_036 span 14. Nothing else is broken.",
+   "committed": {
+    "faults": 1,
+    "found": 1,
+    "firstWave": 0,
+    "wrong": 0,
+    "minutes": 76.12877957233903,
+    "line024": "off",
+    "flights": 4,
+    "retasks": 0,
+    "stranded": 0
+   },
+   "replan": {
+    "faults": 1,
+    "found": 1,
+    "firstWave": 0,
+    "wrong": 0,
+    "minutes": 72.20322940796592,
+    "line024": "off",
+    "flights": 4,
+    "retasks": 2,
+    "stranded": 0
+   }
+  },
+  {
+   "id": "r06",
+   "name": "The span that swung, LINE_054 span 26, really hangs too low.",
+   "committed": {
+    "faults": 1,
+    "found": 1,
+    "firstWave": 1,
+    "wrong": 0,
+    "minutes": 31.031462226807093,
+    "line024": "off",
+    "flights": 3,
+    "retasks": 0,
+    "stranded": 0
+   },
+   "replan": {
+    "faults": 1,
+    "found": 1,
+    "firstWave": 1,
+    "wrong": 0,
+    "minutes": 11.377242575694737,
+    "line024": "off",
+    "flights": 2,
+    "retasks": 2,
+    "stranded": 0
+   }
+  },
+  {
+   "id": "nothing",
+   "name": "Nothing is broken. Every report was a false alarm.",
+   "committed": {
+    "faults": 0,
+    "found": 0,
+    "firstWave": 0,
+    "wrong": 0,
+    "minutes": null,
+    "line024": "live 214 min",
+    "flights": 6,
+    "retasks": 0,
+    "stranded": 0
+   },
+   "replan": {
+    "faults": 0,
+    "found": 0,
+    "firstWave": 0,
+    "wrong": 0,
+    "minutes": null,
+    "line024": "live 48 min",
+    "flights": 8,
+    "retasks": 3,
+    "stranded": 0
+   }
+  },
+  {
+   "id": "unreported",
+   "name": "A tree nobody reported lies on LINE_064 span 16, where this storm pushed trees away from the wire.",
+   "committed": {
+    "faults": 1,
+    "found": 0,
+    "firstWave": 0,
+    "wrong": 0,
+    "minutes": 270,
+    "line024": "live 214 min",
+    "flights": 6,
+    "retasks": 0,
+    "stranded": 0
+   },
+   "replan": {
+    "faults": 1,
+    "found": 0,
+    "firstWave": 0,
+    "wrong": 0,
+    "minutes": 270,
+    "line024": "live 48 min",
+    "flights": 8,
+    "retasks": 3,
+    "stranded": 0
+   }
+  }
+ ],
+ "storms": {
+  "committed": {
+   "storms": 200,
+   "faults": 647,
+   "found": 415,
+   "firstWave": 306,
+   "wrong": 0,
+   "meanMinutes": 138.4327590643141,
+   "stranded": 0,
+   "flights": 6.27,
+   "retasks": 0,
+   "line024Back": 47
+  },
+  "replan": {
+   "storms": 200,
+   "faults": 647,
+   "found": 430,
+   "firstWave": 403,
+   "wrong": 0,
+   "meanMinutes": 108.91102882119266,
+   "stranded": 0,
+   "flights": 5.76,
+   "retasks": 8.615,
+   "line024Back": 47
+  }
+ },
+ "better": 120,
+ "worse": 9
+}
